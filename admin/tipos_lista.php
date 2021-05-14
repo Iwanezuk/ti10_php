@@ -1,6 +1,8 @@
 <?php
 // Incluir o arquivo e fazer a conexão
 include("../Connections/conn_produtos.php");
+// Selecionar o banco de dados
+mysqli_select_db($conn_produtos,$database_conn);
 // Selecionar os dados
 $consulta   =   "SELECT *
                 FROM tbtipos
