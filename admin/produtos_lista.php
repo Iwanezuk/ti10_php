@@ -35,7 +35,11 @@ $totalRows  = ($lista)->num_rows;
                 <th>RESUMO</th>
                 <th>VALOR</th>
                 <th>IMAGEM</th>
-                <th>ADICIONAR</th>
+                <th>
+                    <a href="produtos_insere.php" target="_self">
+                        ADICIONAR
+                    </a>
+                </th>
             </tr>
         </thead>
         <!-- tbody>tr>td*8 -->
