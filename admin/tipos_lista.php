@@ -26,22 +26,24 @@ $totalRows  =   ($lista)->num_rows;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- Link para CSS específico -->
-    
+    <link rel="stylesheet" href="../css/meu_estilo.css" type="text/css">
 </head>
-<body>
-<!-- main>h1 -->
-<main>
-    <h1>Lista de Tipos</h1>
-    <table border="1">
+<body class="fundofixo">
+<?php include "menu_adm.php"; ?>
+<main class="container">
+    <h1 class="breadcrumb alert-warning">Lista de Tipos</h1>
+    <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4"><!-- dimensionamento -->
+    <table class="table table-hover table-condensed tbopacidade">
         <!-- thead>tr>th*4 -->
         <thead><!-- cabeçalho da tabela -->
             <tr>
-                <th>ID</th><!-- cabeça da coluna -->
+                <th class="hidden">ID</th><!-- cabeça da coluna -->
                 <th>SIGLA</th>
                 <th>RÓTULO</th>
                 <th>
-                    <a href="tipos_insere.php" target="_self">
-                        ADICIONAR
+                    <a href="tipos_insere.php" target="_self" class="btn btn-block btn-primary btn-xs" role="button">
+                        <span class="hidden-xs">ADICIONAR <br></span>
+                        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                     </a>
                 </th>
             </tr>
@@ -51,12 +53,15 @@ $totalRows  =   ($lista)->num_rows;
             <!-- Abre a estrutura de repetição -->
             <?php do { ?>
             <tr><!-- linha da tabela -->
-                <td><?php echo $row['id_tipo']; ?></td>
+                <td class="hidden"><?php echo $row['id_tipo']; ?></td>
                 <td><?php echo $row['sigla_tipo']; ?></td>
                 <td><?php echo $row['rotulo_tipo']; ?></td>
-                <td>ALTERAR|
-                    <button data-nome="<?php echo $row['rotulo_tipo'] ?>" data-id="<?php echo $row['id_tipo'] ?>" class="delete btn btn-danger btn-xs">
-                        <span class="hidden-xs">EXCLUIR</span>
+                <td><a href="tipos_atualiza.php?id_tipo=<?php echo $row['id_tipo']; ?>" class="btn btn-warning btn-block btn-xs">
+                        <span class="hidden-xs">ALTERAR <br></span>
+                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </a>
+                    <button data-nome="<?php echo $row['rotulo_tipo'] ?>" data-id="<?php echo $row['id_tipo'] ?>" class="delete btn btn-danger btn-block btn-xs">
+                        <span class="hidden-xs">EXCLUIR <br></span>
                         <span class="glyphicon glyphicon-trash" aria-hidden="true"></span>
                     </button>
                 </td>
@@ -65,6 +70,7 @@ $totalRows  =   ($lista)->num_rows;
             <!-- Fecha a estrutura de repetição -->
         </tbody>
     </table>
+    </div><!-- fecha dimensionamento -->
 </main>
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">
