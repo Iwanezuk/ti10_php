@@ -25,7 +25,7 @@
 
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                    <button class="btn btn-default disabled" role="alert">
+                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
                         PRODUTOS
                     </button>
                 </div><!-- fecha btn-group -->
@@ -61,7 +61,7 @@
         <div class="alert-warning">
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                    <button class="btn btn-default disabled" role="alert">
+                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
                         TIPOS
                     </button>
                 </div><!-- fecha btn-group -->
@@ -97,7 +97,7 @@
         <div class="alert-info">
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group">
-                    <button class="btn btn-default disabled" role="alert">
+                    <button class="btn btn-default disabled" role="alert" style="cursor: default;">
                         USUÁRIOS
                     </button>
                 </div><!-- fecha btn-group -->
