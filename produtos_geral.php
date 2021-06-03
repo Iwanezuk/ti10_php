@@ -38,7 +38,9 @@ $totalRows  =   ($lista)->num_rows;
 <!-- abre thumbnail/card -->
 <div class="col-sm-6 col-md-4"><!-- dimensionamento -->
     <div class="thumbnail">
-        <img src="imagens/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive img-rounded" style="height: 20em;">
+        <a href="produto_detalhe.php?id_produto=<?php echo $row['id_produto']; ?>">
+            <img src="imagens/<?php echo $row['imagem_produto']; ?>" alt="" class="img-responsive img-rounded" style="height: 20em;">
+        </a>
         <div class="caption text-right">
             <h3 class="text-danger">
                 <strong><?php echo $row['descri_produto']; ?></strong>
@@ -50,10 +52,10 @@ $totalRows  =   ($lista)->num_rows;
                 <?php echo mb_strimwidth($row['resumo_produto'],0,42,'...'); ?>
             </p>
             <p>
-                <button class="btn btn-default disabled" role="button">
+                <button class="btn btn-default disabled" role="button" style="cursor: default;">
                     <?php echo number_format($row['valor_produto'],2,',','.'); ?>
                 </button>
-                <a href="" class="btn btn-danger" role="button">
+                <a href="produto_detalhe.php?id_produto=<?php echo $row['id_produto']; ?>" class="btn btn-danger" role="button">
                     <span class="hidden-xs">Saiba mais...</span>
                     <span class="visible-xs glyphicon glyphicon-eye-open" aria-hidden="true"></span>
                 </a>
