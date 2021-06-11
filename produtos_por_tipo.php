@@ -29,10 +29,30 @@ $totalRows  =   ($lista)->num_rows;
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
-<body>
-<h2 class="breadcrumb alert-danger"><?php echo $row['rotulo_tipo']; ?></h2>
-<div class="row"><!-- manter os elementos na linha -->
+<body class="fundofixo">
+<?php include('menu_publico.php'); ?>
+<main class="container">
 
+<!-- Mostrar se os registros retornarem VAZIOS -->
+<?php if($totalRows == 0) { ?>
+    <h2 class="breadcrumb alert-danger">
+    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    Em breve os mais deliciosos produtos ao seu dispor!  
+</h2>
+<?php }; ?>
+<!-- Fecha Registros VAZIOS -->
+
+<!-- Mostrar se os registros NÃO retornarem VAZIOS -->
+<?php if($totalRows > 0) { ?>
+<h2 class="breadcrumb alert-danger">
+    <a href="javascript:window.history.go(-1)" class="btn btn-danger">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <strong><?php echo $row['rotulo_tipo']; ?></strong>
+</h2>
+<div class="row"><!-- manter os elementos na linha -->
 <!-- Abre a estrutura de repetição -->
 <?php do { ?> 
 <!-- abre thumbnail/card -->
@@ -68,7 +88,14 @@ $totalRows  =   ($lista)->num_rows;
 <!-- fecha a estrutura de repetição -->
 
 </div><!-- fecha row -->
-    
+<?php }; ?> 
+<!-- Fecha registros NÃO VAZIOS -->
+ 
+<!-- Rodapé -->
+<footer class="panel-footer" style="background: none;">
+    <?php include('rodape.php'); ?>
+</footer>
+</main>   
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
