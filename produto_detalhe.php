@@ -30,6 +30,8 @@ $totalRows  =   ($lista)->num_rows;
     <link rel="stylesheet" href="css/meu_estilo.css">
 </head>
 <body class="fundofixo">
+<!-- ÁREA DO MENU -->
+<?php include('menu_publico.php'); ?>
 <main class="container">
 <h2 class="breadcrumb alert-danger">
     <a href="javascript:window.history.go(-1)" class="btn btn-danger">
@@ -71,7 +73,12 @@ $totalRows  =   ($lista)->num_rows;
 
 </div><!-- fecha row -->
 
-</main>
+    <!-- Rodapé -->
+    <footer class="panel-footer" style="background: none;">
+        <?php include('rodape.php'); ?>
+        <a name="contato">&nbsp;</a>
+    </footer>
+</main> 
 <!-- Link arquivos Bootstrap js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
