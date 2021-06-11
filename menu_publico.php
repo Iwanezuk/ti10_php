@@ -20,11 +20,14 @@ $totalRows_tipos  =   ($lista_tipos)->num_rows;
     <title>Menu público</title>
     <meta charset="UTF-8">
     <!-- Link arquivos Bootstrap CSS -->
+    <!-- CÓDIGO DESABILITADO PARA NÃO HAVER CONFLITOS
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    -->
     <!-- Link para CSS específico -->
     <link rel="stylesheet" href="css/meu_estilo.css">
+    
 </head>
 <body>
 <!-- Abre a barra de navegação -->
@@ -79,7 +82,7 @@ $totalRows_tipos  =   ($lista_tipos)->num_rows;
                     <div class="input-group">
                         <input type="search" name="buscar" id="buscar" size="9" class="form-control" aria-label="search" placeholder="Busca produto" required>
                         <div class="input-group-btn">
-                            <button type="button" class="btn btn-default">
+                            <button type="submit" class="btn btn-default">
                                 <span class="glyphicon glyphicon-search"></span>
                             </button>
                         </div>
@@ -102,8 +105,10 @@ $totalRows_tipos  =   ($lista_tipos)->num_rows;
 <!-- Fecha a barra de navegação --> 
 
 <!-- Link arquivos Bootstrap js -->
+<!-- CÓDIGO DESABILITADO PARA NÃO HAVER CONFLITOS
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+-->
 </body>
 </html>
 <?php mysqli_free_result($lista_tipos); ?>
