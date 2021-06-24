@@ -41,7 +41,7 @@ $totalRows  =   ($lista)->num_rows;
       box-sizing: border-box;
     }
     .slider {
-        width: 80%;
+        width: 90%;
         margin: 20px auto;
     }
     .slick-slide {
@@ -130,7 +130,6 @@ $totalRows  =   ($lista)->num_rows;
 
 </body>
 
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </html>
 <?php mysqli_free_result($lista); ?>
